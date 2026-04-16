@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Fondo
   - 
   - 
   - 
@@ -40,6 +40,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Personaje
+    uniqueID: 2919652325
+    locked: 0
+  - name: Suelo
+    uniqueID: 2889223987
+    locked: 0
+  - name: Fondo
+    uniqueID: 2965026765
     locked: 0
   m_RenderingLayers:
   - Default
