@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 499d4026e264d1c4790a8b566fd48d67
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8401593521253974037
+    second: "dise\xF1o proyecto prota_0"
+  - first:
+      213: -2893174119347435060
+    second: "dise\xF1o proyecto prota_1"
+  - first:
+      213: 821777640368335626
+    second: "dise\xF1o proyecto prota_2"
+  - first:
+      213: 8192064313469343369
+    second: "dise\xF1o proyecto prota_3"
+  - first:
+      213: 4742410653862274276
+    second: "dise\xF1o proyecto prota_4"
+  - first:
+      213: -7494110562858277291
+    second: "dise\xF1o proyecto prota_5"
+  - first:
+      213: -6626181444739269668
+    second: "dise\xF1o proyecto prota_6"
+  - first:
+      213: -2304353258494266837
+    second: "dise\xF1o proyecto prota_7"
+  - first:
+      213: 722648915783426801
+    second: "dise\xF1o proyecto prota_8"
+  - first:
+      213: -4975473766934031373
+    second: "dise\xF1o proyecto prota_9"
+  - first:
+      213: 6485944012516772277
+    second: "dise\xF1o proyecto prota_10"
+  - first:
+      213: 3960745741131853961
+    second: "dise\xF1o proyecto prota_11"
+  - first:
+      213: 1631656498472196224
+    second: "dise\xF1o proyecto prota_12"
+  - first:
+      213: -7597786591965037923
+    second: "dise\xF1o proyecto prota_13"
+  - first:
+      213: 2439496159718586649
+    second: "dise\xF1o proyecto prota_14"
+  - first:
+      213: 7195542288503925483
+    second: "dise\xF1o proyecto prota_15"
+  - first:
+      213: 3555111552455231773
+    second: "dise\xF1o proyecto prota_16"
+  - first:
+      213: -678274013939593138
+    second: "dise\xF1o proyecto prota_17"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_0"
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1005
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51001954bc4789470800000000000000
+      internalID: 8401593521253974037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_1"
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1005
+        width: 49
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc941f6977169d7d0800000000000000
+      internalID: -2893174119347435060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_2"
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1005
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b6382f86a876b00800000000000000
+      internalID: 821777640368335626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_3"
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1005
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9869e75f61f00b170800000000000000
+      internalID: 8192064313469343369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_4"
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1005
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e42d720d5d60d140800000000000000
+      internalID: 4742410653862274276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_5"
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1005
+        width: 49
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556645906229ff790800000000000000
+      internalID: -7494110562858277291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_6"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 895
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbf70145131b04a0800000000000000
+      internalID: -6626181444739269668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_7"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 895
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b227f6e9bea4500e0800000000000000
+      internalID: -2304353258494266837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_8"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 895
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2a7923c5d570a00800000000000000
+      internalID: 722648915783426801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_9"
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 895
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f35f9c58f093fab0800000000000000
+      internalID: -4975473766934031373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_10"
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 895
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9422327b3b20a50800000000000000
+      internalID: 6485944012516772277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_11"
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 895
+        width: 46
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9803ec1444567f630800000000000000
+      internalID: 3960745741131853961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_12"
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 895
+        width: 47
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08894e2c0fec4a610800000000000000
+      internalID: 1631656498472196224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_13"
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 895
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ab2b2795d3f8690800000000000000
+      internalID: -7597786591965037923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_14"
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 767
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919b4fe05d4dad120800000000000000
+      internalID: 2439496159718586649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_15"
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 767
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beae3987693bbd360800000000000000
+      internalID: 7195542288503925483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_16"
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 767
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d194bf40f1b465130800000000000000
+      internalID: 3555111552455231773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dise\xF1o proyecto prota_17"
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 767
+        width: 78
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4090c2c0694696f0800000000000000
+      internalID: -678274013939593138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "dise\xF1o proyecto prota_0": 8401593521253974037
+      "dise\xF1o proyecto prota_1": -2893174119347435060
+      "dise\xF1o proyecto prota_10": 6485944012516772277
+      "dise\xF1o proyecto prota_11": 3960745741131853961
+      "dise\xF1o proyecto prota_12": 1631656498472196224
+      "dise\xF1o proyecto prota_13": -7597786591965037923
+      "dise\xF1o proyecto prota_14": 2439496159718586649
+      "dise\xF1o proyecto prota_15": 7195542288503925483
+      "dise\xF1o proyecto prota_16": 3555111552455231773
+      "dise\xF1o proyecto prota_17": -678274013939593138
+      "dise\xF1o proyecto prota_2": 821777640368335626
+      "dise\xF1o proyecto prota_3": 8192064313469343369
+      "dise\xF1o proyecto prota_4": 4742410653862274276
+      "dise\xF1o proyecto prota_5": -7494110562858277291
+      "dise\xF1o proyecto prota_6": -6626181444739269668
+      "dise\xF1o proyecto prota_7": -2304353258494266837
+      "dise\xF1o proyecto prota_8": 722648915783426801
+      "dise\xF1o proyecto prota_9": -4975473766934031373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
