@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   velocidadMovimiento: 8
-  fuerzaSalto: 5
+  fuerzaSalto: 3
   piesPosicion: {fileID: 2086937524}
   radioDeteccion: 0.3
   queEsSuelo:
