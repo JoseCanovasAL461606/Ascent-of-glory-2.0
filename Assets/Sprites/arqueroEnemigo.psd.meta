@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 8495468b228491542923c218daa39325
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7284126720533765474
+    second: arqueroEnemigo_0
+  - first:
+      213: -6585246031184566320
+    second: arqueroEnemigo_1
+  - first:
+      213: -3865759091608464745
+    second: arqueroEnemigo_2
+  - first:
+      213: 4973195374828859381
+    second: arqueroEnemigo_3
+  - first:
+      213: 6626988548762050638
+    second: arqueroEnemigo_4
+  - first:
+      213: -346145727088427520
+    second: arqueroEnemigo_5
+  - first:
+      213: -6707171724626449032
+    second: arqueroEnemigo_6
+  - first:
+      213: 7296693730285752437
+    second: arqueroEnemigo_7
+  - first:
+      213: -973338153593818090
+    second: arqueroEnemigo_8
+  - first:
+      213: 8193378157749048449
+    second: arqueroEnemigo_9
+  - first:
+      213: -2663444845999115520
+    second: arqueroEnemigo_10
+  - first:
+      213: -817570461014908635
+    second: arqueroEnemigo_11
+  - first:
+      213: 7477607567883319610
+    second: arqueroEnemigo_12
+  - first:
+      213: -7887668197212363475
+    second: arqueroEnemigo_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arqueroEnemigo_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 639
+        width: 66
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9267a3375599ea90800000000000000
+      internalID: -7284126720533765474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d761b0ff918c94a0800000000000000
+      internalID: -6585246031184566320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792d07d76901a5ac0800000000000000
+      internalID: -3865759091608464745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff2a4328d6540540800000000000000
+      internalID: 4973195374828859381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e402b8b49fac7fb50800000000000000
+      internalID: 6626988548762050638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00eff509b4e323bf0800000000000000
+      internalID: -346145727088427520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_6
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 639
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87da8124ad65be2a0800000000000000
+      internalID: -6707171724626449032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_7
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 639
+        width: 82
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5709084c940134560800000000000000
+      internalID: 7296693730285752437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_8
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 639
+        width: 77
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614b4b43b120e72f0800000000000000
+      internalID: -973338153593818090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_9
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 639
+        width: 65
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184931b260ab4b170800000000000000
+      internalID: 8193378157749048449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_10
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 639
+        width: 57
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003b06b260b890bd0800000000000000
+      internalID: -2663444845999115520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_11
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 639
+        width: 58
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521aa545ff767a4f0800000000000000
+      internalID: -817570461014908635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_12
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 639
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a393575077cc5c760800000000000000
+      internalID: 7477607567883319610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_13
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 639
+        width: 58
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25e207b09f598290800000000000000
+      internalID: -7887668197212363475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arqueroEnemigo_14
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1072
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937631239ca581c47b927f4bb5f4821f
+      internalID: -2007736236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e6987d335b576ab46a54fd3057dafe1b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      arqueroEnemigo_0: -7284126720533765474
+      arqueroEnemigo_1: -6585246031184566320
+      arqueroEnemigo_10: -2663444845999115520
+      arqueroEnemigo_11: -817570461014908635
+      arqueroEnemigo_12: 7477607567883319610
+      arqueroEnemigo_13: -7887668197212363475
+      arqueroEnemigo_14: -2007736236
+      arqueroEnemigo_2: -3865759091608464745
+      arqueroEnemigo_3: 4973195374828859381
+      arqueroEnemigo_4: 6626988548762050638
+      arqueroEnemigo_5: -346145727088427520
+      arqueroEnemigo_6: -6707171724626449032
+      arqueroEnemigo_7: 7296693730285752437
+      arqueroEnemigo_8: -973338153593818090
+      arqueroEnemigo_9: 8193378157749048449
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

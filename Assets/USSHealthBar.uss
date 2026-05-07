@@ -1,0 +1,50 @@
+:root {
+}
+
+.unity-progress-bar {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.my-progress-bar {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.unity-progress-bar__background {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.my-progress-bar.unity-progress-bar__title {
+    -unity-font-style: bold-and-italic;
+    font-size: 10px;
+    -unity-text-align: middle-right;
+    color: rgb(255, 255, 255);
+    align-self: auto;
+    text-overflow: clip;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    word-spacing: 100px;
+    align-content: auto;
+}
+
+.my-progress-bar#HealthBar .unity-progress-bar__progress {
+    background-color: rgb(239, 0, 5);
+}
+
+.my-progress-bar#StaminaBar .unity-progress-bar__progress {
+    background-color: rgb(0, 195, 199);
+}
