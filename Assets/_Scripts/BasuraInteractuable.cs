@@ -16,43 +16,27 @@ public class BasuraInteractuable : MonoBehaviour, IInteractable
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Al empezar, siempre mostramos la imagen de la basura sucia
-        if (spriteRenderer != null && spriteSucia != null)
-        {
-            spriteRenderer.sprite = spriteSucia;
-        }
+        if (spriteRenderer != null && spriteSucia != null) spriteRenderer.sprite = spriteSucia;
     }
 
     public void Interactuar(PlayerController player)
     {
-        // Si aún no está limpia, permitimos interactuar
         if (!estaLimpia)
         {
-            Debug.Log("Limpiando la basura...");
             contadorLimpieza += 0.5f;
 
             if (contadorLimpieza >= tiempoLimpiezaNecesario)
             {
-                estaLimpia = true; // Marcamos que ya se ha limpiado
+                estaLimpia = true;
+                if (spriteRenderer != null && spriteLimpia != null) spriteRenderer.sprite = spriteLimpia;
 
-                // Cambiamos a la imagen limpia
-                if (spriteRenderer != null && spriteLimpia != null)
-                {
-                    spriteRenderer.sprite = spriteLimpia;
-                }
-
-                // Damos la recompensa
-                string[] posiblesObjetos = { "Pieza Metal", "Tornillo", "Cable" };
+                // --- ACTUALIZADO CON TUS NUEVOS OBJETOS ---
+                string[] posiblesObjetos = { "Lata", "Muelle", "Burbuja" };
                 string objetoGanado = posiblesObjetos[Random.Range(0, posiblesObjetos.Length)];
 
                 player.RecogerObjetoBasura(objetoGanado);
-                Debug.Log("¡Has terminado de limpiar la basura y encontrado: " + objetoGanado + "!");
+                Debug.Log("¡Encontraste: " + objetoGanado + "!");
             }
-        }
-        else
-        {
-            Debug.Log("Esta zona ya está completamente limpia.");
         }
     }
 }

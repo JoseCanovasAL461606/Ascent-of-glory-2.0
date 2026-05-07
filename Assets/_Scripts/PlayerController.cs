@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem; // <-- AÑADIDO PARA EL NUEVO SISTEMA
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,15 +22,14 @@ public class PlayerController : MonoBehaviour
     public float distanciaInteraccion = 1.5f;
     public LayerMask queEsInteractuable;
 
-    // --- REDUCIDO A 2 HUECOS ---
     public List<string> slotsComida = new List<string> { "", "" };
     public List<string> slotsObjetos = new List<string> { "", "" };
 
     [Header("Imágenes para la Interfaz")]
     public Sprite iconoManzana;
-    public Sprite iconoPiezaMetal;
-    public Sprite iconoTornillo;
-    public Sprite iconoCable;
+    public Sprite iconoLata;
+    public Sprite iconoMuelle;
+    public Sprite iconoBurbuja;
 
     [Header("Supervivencia")]
     public float vidaMaxima = 100f;
@@ -37,16 +39,24 @@ public class PlayerController : MonoBehaviour
     public float gastoEscalada = 20f;
     public float gastoSaltoPared = 15f;
 
+    [Header("Estados Alterados (Power-Ups)")]
+    private float tiempoResistenciaIlimitada = 0f;
+    private float tiempoInvulnerabilidad = 0f;
+    private bool superSaltoActivo = false;
+    public bool esInvulnerable = false;
+    public GameObject escudoBurbujaVisual;
+
     [Header("Ayudas de Salto")]
     public float tiempoBufferSalto = 0.2f;
     private float contadorBufferSalto;
     public float tiempoCoyote = 0.15f;
     private float contadorCoyote;
 
+    [Header("Muerte")]
+    public Sprite spriteMuerto;
+
     private ProgressBar uiHealthBar;
     private ProgressBar uiStaminaBar;
-
-    // --- REDUCIDO A 2 ELEMENTOS ---
     private VisualElement[] iconosInventarioComida = new VisualElement[2];
     private VisualElement[] iconosInventarioObjetos = new VisualElement[2];
 
@@ -60,9 +70,21 @@ public class PlayerController : MonoBehaviour
     private bool mirandoDerecha = true;
     private float contadorCooldownAgarre;
     private float contadorAireEstable;
+    private bool estaMuerto = false;
+
+    // --- NUESTRA REFERENCIA AL ARCHIVO DE CONTROLES ---
+    private ControlesJugador controles;
+
+    // Se ejecuta al nacer el objeto para preparar los controles
+    void Awake()
+    {
+        controles = new ControlesJugador();
+    }
 
     void OnEnable()
     {
+        controles.Enable(); // Encendemos los controles
+
         UIDocument uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null) uiDocument = FindFirstObjectByType<UIDocument>();
         if (uiDocument != null)
@@ -71,7 +93,6 @@ public class PlayerController : MonoBehaviour
             uiHealthBar = root.Q<ProgressBar>("HealthBar");
             uiStaminaBar = root.Q<ProgressBar>("StaminaBar");
 
-            // --- BUCLE REDUCIDO A 2 ---
             for (int i = 0; i < 2; i++)
             {
                 VisualElement slotComida = root.Q<VisualElement>($"Slot_Comida_{i + 1}");
@@ -83,22 +104,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        controles.Disable(); // Apagamos los controles si el jugador desaparece
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         vidaActual = vidaMaxima;
         resistenciaActual = resistenciaMaxima;
+
+        if (escudoBurbujaVisual != null) escudoBurbujaVisual.SetActive(false);
     }
 
     void Update()
     {
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
+        if (estaMuerto) return;
+
+        // --- LEYENDO LOS NUEVOS CONTROLES ---
+        Vector2 movimiento = controles.Jugador.Mover.ReadValue<Vector2>();
+        inputHorizontal = movimiento.x;
+        inputVertical = movimiento.y;
 
         if (contadorCooldownAgarre > 0f) contadorCooldownAgarre -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        ManejarPowerUps();
+
+        if (controles.Jugador.Interactuar.WasPressedThisFrame())
         {
             float direccion = mirandoDerecha ? 1f : -1f;
             RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.5f, 1f), 0f, new Vector2(direccion, 0f), distanciaInteraccion, queEsInteractuable);
@@ -110,9 +144,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- SOLO TECLAS 1 y 2 AHORA ---
-        if (Input.GetKeyDown(KeyCode.Alpha1)) UsarSlotComida(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) UsarSlotComida(1);
+        if (controles.Jugador.Obj1.WasPressedThisFrame()) UsarSlotObjeto(0);
+        if (controles.Jugador.Obj2.WasPressedThisFrame()) UsarSlotObjeto(1);
+        if (controles.Jugador.Com1.WasPressedThisFrame()) UsarSlotComida(0);
+        if (controles.Jugador.Com2.WasPressedThisFrame()) UsarSlotComida(1);
 
         ManejarResistencia();
         ManejarSaltoYEscala();
@@ -121,22 +156,110 @@ public class PlayerController : MonoBehaviour
         ManejarGiro();
     }
 
+    void ManejarPowerUps()
+    {
+        if (tiempoResistenciaIlimitada > 0) tiempoResistenciaIlimitada -= Time.deltaTime;
+
+        if (tiempoInvulnerabilidad > 0)
+        {
+            tiempoInvulnerabilidad -= Time.deltaTime;
+            esInvulnerable = true;
+            if (tiempoInvulnerabilidad <= 0)
+            {
+                esInvulnerable = false;
+                if (escudoBurbujaVisual != null) escudoBurbujaVisual.SetActive(false);
+            }
+        }
+    }
+
+    void UsarSlotComida(int index)
+    {
+        if (slotsComida[index] == "Fruta")
+        {
+            float curacion = vidaMaxima * 0.25f;
+            vidaActual = Mathf.Clamp(vidaActual + curacion, 0, vidaMaxima);
+            slotsComida[index] = "";
+        }
+    }
+
+    void UsarSlotObjeto(int index)
+    {
+        string objeto = slotsObjetos[index];
+        if (objeto == "") return;
+
+        if (objeto == "Lata") tiempoResistenciaIlimitada = 3f;
+        else if (objeto == "Muelle") superSaltoActivo = true;
+        else if (objeto == "Burbuja")
+        {
+            tiempoInvulnerabilidad = 3f;
+            esInvulnerable = true;
+            if (escudoBurbujaVisual != null) escudoBurbujaVisual.SetActive(true);
+        }
+        slotsObjetos[index] = "";
+    }
+
+    public void RecibirDano(float cantidad)
+    {
+        if (estaMuerto || esInvulnerable) return;
+
+        vidaActual = Mathf.Clamp(vidaActual - cantidad, 0, vidaMaxima);
+        ActualizarUI();
+
+        if (vidaActual <= 0)
+        {
+            StartCoroutine(RutinaMuerte());
+        }
+    }
+
+    IEnumerator RutinaMuerte()
+    {
+        estaMuerto = true;
+
+        if (anim != null) anim.enabled = false;
+
+        yield return new WaitUntil(() => estaEnSuelo == true);
+
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = 0f;
+
+        CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+        if (col != null) col.enabled = false;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null && spriteMuerto != null) sr.sprite = spriteMuerto;
+
+        transform.position = new Vector3(transform.position.x, transform.position.y - 1.2f, transform.position.z);
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void ManejarResistencia()
     {
         float topeResistencia = (vidaActual / vidaMaxima) * resistenciaMaxima;
         if (estaEnSuelo && !estaEscalando)
+        {
             resistenciaActual = Mathf.MoveTowards(resistenciaActual, topeResistencia, 50f * Time.deltaTime);
+        }
+        if (tiempoResistenciaIlimitada > 0) resistenciaActual = topeResistencia;
     }
 
     void ManejarSaltoYEscala()
     {
         if (estaEnSuelo) contadorCoyote = tiempoCoyote; else contadorCoyote -= Time.deltaTime;
-        if (Input.GetButtonDown("Jump")) contadorBufferSalto = tiempoBufferSalto; else contadorBufferSalto -= Time.deltaTime;
 
-        if (estaEnPared && Input.GetKey(KeyCode.LeftShift) && resistenciaActual > 0 && contadorCooldownAgarre <= 0f)
+        // --- CAMBIO AL NUEVO SISTEMA ---
+        if (controles.Jugador.Saltar.WasPressedThisFrame()) contadorBufferSalto = tiempoBufferSalto;
+        else contadorBufferSalto -= Time.deltaTime;
+
+        bool tieneStaminaParaEscalar = resistenciaActual > 0 || tiempoResistenciaIlimitada > 0;
+
+        // --- CAMBIO AL NUEVO SISTEMA (Mantener pulsado) ---
+        if (estaEnPared && controles.Jugador.Escalar.IsInProgress() && tieneStaminaParaEscalar && contadorCooldownAgarre <= 0f)
         {
             estaEscalando = true;
-            resistenciaActual -= gastoEscalada * Time.deltaTime;
+            if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoEscalada * Time.deltaTime;
         }
         else estaEscalando = false;
 
@@ -163,36 +286,18 @@ public class PlayerController : MonoBehaviour
             uiStaminaBar.title = $"{porcStam}%";
         }
 
-        // --- BUCLE REDUCIDO A 2 ---
         for (int i = 0; i < 2; i++)
         {
             if (iconosInventarioComida[i] != null)
-            {
-                if (slotsComida[i] == "Fruta") iconosInventarioComida[i].style.backgroundImage = new StyleBackground(iconoManzana);
-                else iconosInventarioComida[i].style.backgroundImage = null;
-            }
+                iconosInventarioComida[i].style.backgroundImage = (slotsComida[i] == "Fruta") ? new StyleBackground(iconoManzana) : null;
 
             if (iconosInventarioObjetos[i] != null)
             {
-                if (slotsObjetos[i] == "Pieza Metal")
-                    iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoPiezaMetal);
-                else if (slotsObjetos[i] == "Tornillo")
-                    iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoTornillo);
-                else if (slotsObjetos[i] == "Cable")
-                    iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoCable);
-                else
-                    iconosInventarioObjetos[i].style.backgroundImage = null;
+                if (slotsObjetos[i] == "Lata") iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoLata);
+                else if (slotsObjetos[i] == "Muelle") iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoMuelle);
+                else if (slotsObjetos[i] == "Burbuja") iconosInventarioObjetos[i].style.backgroundImage = new StyleBackground(iconoBurbuja);
+                else iconosInventarioObjetos[i].style.backgroundImage = null;
             }
-        }
-    }
-
-    void UsarSlotComida(int index)
-    {
-        if (slotsComida[index] == "Fruta")
-        {
-            vidaActual = Mathf.Clamp(vidaActual + 20f, 0, vidaMaxima);
-            slotsComida[index] = "";
-            Debug.Log("Has comido una fruta. Vida restaurada.");
         }
     }
 
@@ -214,6 +319,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (estaMuerto) return;
+
         if (estaEscalando)
         {
             rb.gravityScale = 0;
@@ -231,13 +338,15 @@ public class PlayerController : MonoBehaviour
     void Saltar()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-        rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+        float fuerzaAplicada = superSaltoActivo ? fuerzaSalto * 1.6f : fuerzaSalto;
+        superSaltoActivo = false;
+        rb.AddForce(Vector2.up * fuerzaAplicada, ForceMode2D.Impulse);
         contadorBufferSalto = 0f; contadorCoyote = 0f;
     }
 
     void SaltarDesdePared()
     {
-        resistenciaActual -= gastoSaltoPared;
+        if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoSaltoPared;
         rb.linearVelocity = Vector2.zero;
         contadorCooldownAgarre = 0.2f;
         estaEscalando = false;
