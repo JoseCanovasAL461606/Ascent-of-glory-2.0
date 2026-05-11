@@ -1,0 +1,1690 @@
+fileFormatVersion: 2
+guid: 79af1a29e3392b944a8982da5768dc07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1599827164849069880
+    second: Estructura nivel 2_0
+  - first:
+      213: 4138701197061501721
+    second: Estructura nivel 2_1
+  - first:
+      213: 6982058157333727200
+    second: Estructura nivel 2_2
+  - first:
+      213: -6835849446789485575
+    second: Estructura nivel 2_3
+  - first:
+      213: -878193013147582017
+    second: Estructura nivel 2_4
+  - first:
+      213: -3212141197642950716
+    second: Estructura nivel 2_5
+  - first:
+      213: 799651205384116665
+    second: Estructura nivel 2_6
+  - first:
+      213: 3410457070597487968
+    second: Estructura nivel 2_7
+  - first:
+      213: -9125788372866972059
+    second: Estructura nivel 2_8
+  - first:
+      213: -3539841015651392112
+    second: Estructura nivel 2_9
+  - first:
+      213: -1700461624597573526
+    second: Estructura nivel 2_10
+  - first:
+      213: -8451599969648410521
+    second: Estructura nivel 2_11
+  - first:
+      213: 2978290581325976299
+    second: Estructura nivel 2_12
+  - first:
+      213: -8807340702605652610
+    second: Estructura nivel 2_13
+  - first:
+      213: -503219904836920436
+    second: Estructura nivel 2_14
+  - first:
+      213: -5145767570545316488
+    second: Estructura nivel 2_15
+  - first:
+      213: -3039305965337622019
+    second: Estructura nivel 2_16
+  - first:
+      213: -8884515036802254154
+    second: Estructura nivel 2_17
+  - first:
+      213: 1739097231101399225
+    second: Estructura nivel 2_18
+  - first:
+      213: -1351003383661398156
+    second: Estructura nivel 2_19
+  - first:
+      213: 8609230811025188264
+    second: Estructura nivel 2_20
+  - first:
+      213: -7052967314545665122
+    second: Estructura nivel 2_21
+  - first:
+      213: 2265084662106508204
+    second: Estructura nivel 2_22
+  - first:
+      213: -2239577387505508068
+    second: Estructura nivel 2_23
+  - first:
+      213: 8467649339685264952
+    second: Estructura nivel 2_24
+  - first:
+      213: -393346605185062145
+    second: Estructura nivel 2_25
+  - first:
+      213: -8159654235251737742
+    second: Estructura nivel 2_26
+  - first:
+      213: 3001003227384063572
+    second: Estructura nivel 2_27
+  - first:
+      213: 8915409360182641130
+    second: Estructura nivel 2_28
+  - first:
+      213: -330245519034902282
+    second: Estructura nivel 2_29
+  - first:
+      213: 4082913395547818042
+    second: Estructura nivel 2_30
+  - first:
+      213: 2521190012214832818
+    second: Estructura nivel 2_31
+  - first:
+      213: 2695504039495490156
+    second: Estructura nivel 2_32
+  - first:
+      213: 8202317865892102551
+    second: Estructura nivel 2_33
+  - first:
+      213: -8264699655730890935
+    second: Estructura nivel 2_34
+  - first:
+      213: 7808324021486815047
+    second: Estructura nivel 2_35
+  - first:
+      213: -1443051820230499677
+    second: Estructura nivel 2_36
+  - first:
+      213: -794086464529568104
+    second: Estructura nivel 2_37
+  - first:
+      213: -8814637977732169257
+    second: Estructura nivel 2_38
+  - first:
+      213: -3331887849565983108
+    second: Estructura nivel 2_39
+  - first:
+      213: 4762074999324985063
+    second: Estructura nivel 2_40
+  - first:
+      213: -3576304675170548560
+    second: Estructura nivel 2_41
+  - first:
+      213: -3766336350372292300
+    second: Estructura nivel 2_42
+  - first:
+      213: 792052448091514658
+    second: Estructura nivel 2_43
+  - first:
+      213: -4538172433502990052
+    second: Estructura nivel 2_44
+  - first:
+      213: 499572980650300969
+    second: Estructura nivel 2_45
+  - first:
+      213: 4286922504483827984
+    second: Estructura nivel 2_46
+  - first:
+      213: 3677048333629745532
+    second: Estructura nivel 2_47
+  - first:
+      213: -8966659564411217700
+    second: Estructura nivel 2_48
+  - first:
+      213: -846499866931866118
+    second: Estructura nivel 2_49
+  - first:
+      213: 2921832966269233568
+    second: Estructura nivel 2_50
+  - first:
+      213: 2676157825759698431
+    second: Estructura nivel 2_51
+  - first:
+      213: -5672948040508159418
+    second: Estructura nivel 2_52
+  - first:
+      213: 9055579159962101430
+    second: Estructura nivel 2_53
+  - first:
+      213: -1912547438508491105
+    second: Estructura nivel 2_54
+  - first:
+      213: -4567732031807465168
+    second: Estructura nivel 2_55
+  - first:
+      213: 1774928089031423975
+    second: Estructura nivel 2_56
+  - first:
+      213: -4861156754333408375
+    second: Estructura nivel 2_57
+  - first:
+      213: -951266114846473327
+    second: Estructura nivel 2_58
+  - first:
+      213: 1716523857243419797
+    second: Estructura nivel 2_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Estructura nivel 2_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0a6297ba54cc9e0800000000000000
+      internalID: -1599827164849069880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913b55a9fce9f6930800000000000000
+      internalID: 4138701197061501721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7cefcc6e045e060800000000000000
+      internalID: 6982058157333727200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fbef02652f2221a0800000000000000
+      internalID: -6835849446789485575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1cb1f7b1800d3f0800000000000000
+      internalID: -878193013147582017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c71812799e2c63d0800000000000000
+      internalID: -3212141197642950716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 271
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b91229d88ee81b00800000000000000
+      internalID: 799651205384116665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 271
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06dbea6e2a0645f20800000000000000
+      internalID: 3410457070597487968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 271
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566cfdb43dfaa5180800000000000000
+      internalID: -9125788372866972059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 255
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095adb4e955ffdec0800000000000000
+      internalID: -3539841015651392112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a609daf692fb668e0800000000000000
+      internalID: -1700461624597573526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_11
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76087692b92e5ba80800000000000000
+      internalID: -8451599969648410521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be293d90183055920800000000000000
+      internalID: 2978290581325976299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_13
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7dc9555b4a06c580800000000000000
+      internalID: -8807340702605652610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b1a48a9243409f0800000000000000
+      internalID: -503219904836920436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87debe478af8698b0800000000000000
+      internalID: -5145767570545316488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_16
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df94354d35732d5d0800000000000000
+      internalID: -3039305965337622019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_17
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6baf8cd65acd3b480800000000000000
+      internalID: -8884515036802254154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_18
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 207
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b01aa1b7b3822810800000000000000
+      internalID: 1739097231101399225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_19
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 208
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477f28a9495404de0800000000000000
+      internalID: -1351003383661398156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a521881fc12a7770800000000000000
+      internalID: 8609230811025188264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_21
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b901c7893de1e90800000000000000
+      internalID: -7052967314545665122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab4b0fcf723f6f10800000000000000
+      internalID: 2265084662106508204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_23
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11acba5b3c6be0e0800000000000000
+      internalID: -2239577387505508068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ed28ef532238570800000000000000
+      internalID: 8467649339685264952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_25
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaa65cb85d8a8af0800000000000000
+      internalID: -393346605185062145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_26
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bfec964b513ce80800000000000000
+      internalID: -8159654235251737742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456270a0984b5a920800000000000000
+      internalID: 3001003227384063572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_28
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae101e4c395e9bb70800000000000000
+      internalID: 8915409360182641130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_29
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 160
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8924d337bba6bf0800000000000000
+      internalID: -330245519034902282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38cf4ed91c69a830800000000000000
+      internalID: 4082913395547818042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_31
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bee35155f01df220800000000000000
+      internalID: 2521190012214832818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_32
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a52cc74aa586520800000000000000
+      internalID: 2695504039495490156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_33
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791c65b24ac74d170800000000000000
+      internalID: 8202317865892102551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_34
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947fddc8373ed4d80800000000000000
+      internalID: -8264699655730890935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_35
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7470fd7c35dbc5c60800000000000000
+      internalID: 7808324021486815047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_36
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a22eaed30049fbe0800000000000000
+      internalID: -1443051820230499677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_37
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ee4c85196daf4f0800000000000000
+      internalID: -794086464529568104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_38
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 127
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d14b91167d1ca580800000000000000
+      internalID: -8814637977732169257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_39
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 112
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7eed2767a1c2c1d0800000000000000
+      internalID: -3331887849565983108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_40
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6c8883bf9461240800000000000000
+      internalID: 4762074999324985063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_41
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b404e398d96e5ec0800000000000000
+      internalID: -3576304675170548560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_42
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4391b635b094bbbc0800000000000000
+      internalID: -3766336350372292300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_43
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22729fb418fedfa00800000000000000
+      internalID: 792052448091514658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_44
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11959b473c2501c0800000000000000
+      internalID: -4538172433502990052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_45
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9265b03aaf6dee600800000000000000
+      internalID: 499572980650300969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_46
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011f2630e453e7b30800000000000000
+      internalID: 4286922504483827984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_47
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7961f34aff770330800000000000000
+      internalID: 3677048333629745532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_48
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 79
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8196132a6009380800000000000000
+      internalID: -8966659564411217700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_49
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 64
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af55c112bd0a044f0800000000000000
+      internalID: -846499866931866118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9e08f2a9f6c8820800000000000000
+      internalID: 2921832966269233568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_51
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdd9471d5f932520800000000000000
+      internalID: 2676157825759698431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_52
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a434050d3a541b0800000000000000
+      internalID: -5672948040508159418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_53
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6a8f87441ebad70800000000000000
+      internalID: 9055579159962101430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_54
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e3e9fdc344575e0800000000000000
+      internalID: -1912547438508491105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_55
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03951fefae72c90c0800000000000000
+      internalID: -4567732031807465168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_56
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7b49861bfc1a810800000000000000
+      internalID: 1774928089031423975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_57
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983677cffa3b98cb0800000000000000
+      internalID: -4861156754333408375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_58
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 193c5b1328c6cc2f0800000000000000
+      internalID: -951266114846473327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Estructura nivel 2_59
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5943a778a5152d710800000000000000
+      internalID: 1716523857243419797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b3e0b34cd85ebe644ac50c6a7153a147
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Estructura nivel 2_0: -1599827164849069880
+      Estructura nivel 2_1: 4138701197061501721
+      Estructura nivel 2_10: -1700461624597573526
+      Estructura nivel 2_11: -8451599969648410521
+      Estructura nivel 2_12: 2978290581325976299
+      Estructura nivel 2_13: -8807340702605652610
+      Estructura nivel 2_14: -503219904836920436
+      Estructura nivel 2_15: -5145767570545316488
+      Estructura nivel 2_16: -3039305965337622019
+      Estructura nivel 2_17: -8884515036802254154
+      Estructura nivel 2_18: 1739097231101399225
+      Estructura nivel 2_19: -1351003383661398156
+      Estructura nivel 2_2: 6982058157333727200
+      Estructura nivel 2_20: 8609230811025188264
+      Estructura nivel 2_21: -7052967314545665122
+      Estructura nivel 2_22: 2265084662106508204
+      Estructura nivel 2_23: -2239577387505508068
+      Estructura nivel 2_24: 8467649339685264952
+      Estructura nivel 2_25: -393346605185062145
+      Estructura nivel 2_26: -8159654235251737742
+      Estructura nivel 2_27: 3001003227384063572
+      Estructura nivel 2_28: 8915409360182641130
+      Estructura nivel 2_29: -330245519034902282
+      Estructura nivel 2_3: -6835849446789485575
+      Estructura nivel 2_30: 4082913395547818042
+      Estructura nivel 2_31: 2521190012214832818
+      Estructura nivel 2_32: 2695504039495490156
+      Estructura nivel 2_33: 8202317865892102551
+      Estructura nivel 2_34: -8264699655730890935
+      Estructura nivel 2_35: 7808324021486815047
+      Estructura nivel 2_36: -1443051820230499677
+      Estructura nivel 2_37: -794086464529568104
+      Estructura nivel 2_38: -8814637977732169257
+      Estructura nivel 2_39: -3331887849565983108
+      Estructura nivel 2_4: -878193013147582017
+      Estructura nivel 2_40: 4762074999324985063
+      Estructura nivel 2_41: -3576304675170548560
+      Estructura nivel 2_42: -3766336350372292300
+      Estructura nivel 2_43: 792052448091514658
+      Estructura nivel 2_44: -4538172433502990052
+      Estructura nivel 2_45: 499572980650300969
+      Estructura nivel 2_46: 4286922504483827984
+      Estructura nivel 2_47: 3677048333629745532
+      Estructura nivel 2_48: -8966659564411217700
+      Estructura nivel 2_49: -846499866931866118
+      Estructura nivel 2_5: -3212141197642950716
+      Estructura nivel 2_50: 2921832966269233568
+      Estructura nivel 2_51: 2676157825759698431
+      Estructura nivel 2_52: -5672948040508159418
+      Estructura nivel 2_53: 9055579159962101430
+      Estructura nivel 2_54: -1912547438508491105
+      Estructura nivel 2_55: -4567732031807465168
+      Estructura nivel 2_56: 1774928089031423975
+      Estructura nivel 2_57: -4861156754333408375
+      Estructura nivel 2_58: -951266114846473327
+      Estructura nivel 2_59: 1716523857243419797
+      Estructura nivel 2_6: 799651205384116665
+      Estructura nivel 2_7: 3410457070597487968
+      Estructura nivel 2_8: -9125788372866972059
+      Estructura nivel 2_9: -3539841015651392112
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
