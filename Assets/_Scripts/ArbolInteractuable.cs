@@ -18,7 +18,7 @@ public class ArbolInteractuable : MonoBehaviour, IInteractable
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Al empezar, el árbol siempre está seco
+        
         if (spriteRenderer != null)
         {
             spriteRenderer.sprite = spriteSeco;
@@ -27,7 +27,7 @@ public class ArbolInteractuable : MonoBehaviour, IInteractable
 
     public void Interactuar(PlayerController player)
     {
-        // 1. FASE DE RIEGO (Si el árbol está seco)
+      
         if (!estaRegado)
         {
             Debug.Log("Regando el árbol seco...");
@@ -35,9 +35,9 @@ public class ArbolInteractuable : MonoBehaviour, IInteractable
 
             if (contadorRiego >= tiempoRiegoNecesario)
             {
-                estaRegado = true; // El árbol revive
+                estaRegado = true; 
 
-                // Cambiamos la imagen
+              
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.sprite = spriteConHojas;
@@ -47,7 +47,7 @@ public class ArbolInteractuable : MonoBehaviour, IInteractable
                 Debug.Log("¡El árbol ha revivido y la fruta está en tu inventario!");
             }
         }
-        // 2. FASE DE RECOLECCIÓN (Si ya tiene hojas)
+       
         else if (frutasDisponibles > 0)
         {
             DarFrutaDirecta(player);
@@ -61,7 +61,7 @@ public class ArbolInteractuable : MonoBehaviour, IInteractable
 
     void DarFrutaDirecta(PlayerController player)
     {
-        // Esto añade la fruta internamente al inventario del jugador sin instanciar nada en el mundo
+        
         player.RecogerFruta();
         frutasDisponibles--;
     }

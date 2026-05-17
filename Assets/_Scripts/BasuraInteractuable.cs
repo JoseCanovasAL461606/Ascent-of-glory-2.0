@@ -30,7 +30,7 @@ public class BasuraInteractuable : MonoBehaviour, IInteractable
                 estaLimpia = true;
                 if (spriteRenderer != null && spriteLimpia != null) spriteRenderer.sprite = spriteLimpia;
 
-                // --- ACTUALIZADO CON TUS NUEVOS OBJETOS ---
+               
                 string[] posiblesObjetos = { "Lata", "Muelle", "Burbuja" };
                 string objetoGanado = posiblesObjetos[Random.Range(0, posiblesObjetos.Length)];
 

@@ -8,8 +8,8 @@ public class EsqueletoEnemigo : MonoBehaviour
 
     [Header("Detección (Bastón de ciego)")]
     public Transform controladorSuelo;
-    public float distanciaRayoSuelo = 1.0f; // Rayo largo hacia abajo para precipicios
-    public float distanciaMuro = 0.3f;      // Rayo corto hacia adelante para paredes
+    public float distanciaRayoSuelo = 1.0f; 
+    public float distanciaMuro = 0.3f;      
     public LayerMask queEsSuelo;
 
     [Header("Combate")]
@@ -41,19 +41,19 @@ public class EsqueletoEnemigo : MonoBehaviour
 
         contadorAtaque -= Time.deltaTime;
 
-        // 1. Rayo hacia ABAJO para buscar precipicios
+       
         bool haySuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaRayoSuelo, queEsSuelo);
 
         Vector2 direccionMiro = mirandoDerecha ? Vector2.right : Vector2.left;
 
-        // 2. Rayo hacia ADELANTE para buscar paredes (elevado para no chocar con las rampas)
+       
         bool chocaPared = Physics2D.Raycast(controladorSuelo.position + Vector3.up * 0.6f, direccionMiro, distanciaMuro, queEsSuelo);
 
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
 
         if (distanciaJugador <= rangoAtaque)
         {
-            // 1. ATACAR
+            
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
             if (contadorAtaque <= 0)
@@ -63,26 +63,26 @@ public class EsqueletoEnemigo : MonoBehaviour
         }
         else if (distanciaJugador <= rangoVision)
         {
-            // 2. PERSEGUIR
+            
             if (jugador.position.x > transform.position.x && !mirandoDerecha) Voltear();
             else if (jugador.position.x < transform.position.x && mirandoDerecha) Voltear();
 
             direccionMiro = mirandoDerecha ? Vector2.right : Vector2.left;
 
-            // Solo avanza si NO se va a caer y NO hay pared
+           
             if (haySuelo && !chocaPared)
             {
                 rb.linearVelocity = new Vector2(direccionMiro.x * velocidadPersecucion, rb.linearVelocity.y);
             }
             else
             {
-                // Frena en el precipicio o pared
+               
                 rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
         }
         else
         {
-            // 3. PATRULLAR
+           
             if (!haySuelo || chocaPared)
             {
                 Voltear();
@@ -92,7 +92,7 @@ public class EsqueletoEnemigo : MonoBehaviour
             rb.linearVelocity = new Vector2(direccionMiro.x * velocidadPatrulla, rb.linearVelocity.y);
         }
 
-        // Actualización del Multiplicador de Animación
+        
         if (anim != null && velocidadPatrulla > 0)
         {
             float velocidadActual = Mathf.Abs(rb.linearVelocity.x);
@@ -106,10 +106,10 @@ public class EsqueletoEnemigo : MonoBehaviour
         estaAtacando = true;
         contadorAtaque = tiempoEntreAtaques;
 
-        // Frenamos en seco para que no patine mientras ataca
+       
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
-        // Pausamos el movimiento de piernas en la animación para el golpe
+        
         if (anim != null) anim.SetFloat("Multiplicador", 0f);
         if (anim != null) anim.SetTrigger("Atacar");
 

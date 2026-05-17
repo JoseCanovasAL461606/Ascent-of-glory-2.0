@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // <-- AÑADIDO PARA EL NUEVO SISTEMA
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,9 +13,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Detección de Suelo y Pared")]
     public Transform piesPosicion;
-    public float radioDeteccion = 0.3f;
+    public float radioDeteccionSuelo = 0.3f;
     public LayerMask queEsSuelo;
     public Transform detectorPared;
+    public float radioDeteccionPared = 0.1f;
     public LayerMask queEsPared;
 
     [Header("Interacción e Inventario")]
@@ -52,6 +53,8 @@ public class PlayerController : MonoBehaviour
     public float tiempoCoyote = 0.15f;
     private float contadorCoyote;
 
+    private float contadorPerdidaControl;
+
     [Header("Muerte")]
     public Sprite spriteMuerto;
 
@@ -72,10 +75,8 @@ public class PlayerController : MonoBehaviour
     private float contadorAireEstable;
     private bool estaMuerto = false;
 
-    // --- NUESTRA REFERENCIA AL ARCHIVO DE CONTROLES ---
     private ControlesJugador controles;
 
-    // Se ejecuta al nacer el objeto para preparar los controles
     void Awake()
     {
         controles = new ControlesJugador();
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     void OnEnable()
     {
-        controles.Enable(); // Encendemos los controles
+        controles.Enable();
 
         UIDocument uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null) uiDocument = FindFirstObjectByType<UIDocument>();
@@ -106,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDisable()
     {
-        controles.Disable(); // Apagamos los controles si el jugador desaparece
+        controles.Disable();
     }
 
     void Start()
@@ -123,12 +124,13 @@ public class PlayerController : MonoBehaviour
     {
         if (estaMuerto) return;
 
-        // --- LEYENDO LOS NUEVOS CONTROLES ---
         Vector2 movimiento = controles.Jugador.Mover.ReadValue<Vector2>();
         inputHorizontal = movimiento.x;
         inputVertical = movimiento.y;
 
         if (contadorCooldownAgarre > 0f) contadorCooldownAgarre -= Time.deltaTime;
+
+        if (contadorPerdidaControl > 0f) contadorPerdidaControl -= Time.deltaTime;
 
         ManejarPowerUps();
 
@@ -249,14 +251,12 @@ public class PlayerController : MonoBehaviour
     {
         if (estaEnSuelo) contadorCoyote = tiempoCoyote; else contadorCoyote -= Time.deltaTime;
 
-        // --- CAMBIO AL NUEVO SISTEMA ---
         if (controles.Jugador.Saltar.WasPressedThisFrame()) contadorBufferSalto = tiempoBufferSalto;
         else contadorBufferSalto -= Time.deltaTime;
 
         bool tieneStaminaParaEscalar = resistenciaActual > 0 || tiempoResistenciaIlimitada > 0;
 
-        // --- CAMBIO AL NUEVO SISTEMA (Mantener pulsado) ---
-        if (estaEnPared && controles.Jugador.Escalar.IsInProgress() && tieneStaminaParaEscalar && contadorCooldownAgarre <= 0f)
+        if (estaEnPared && !estaEnSuelo && controles.Jugador.Escalar.IsInProgress() && tieneStaminaParaEscalar && contadorCooldownAgarre <= 0f)
         {
             estaEscalando = true;
             if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoEscalada * Time.deltaTime;
@@ -329,10 +329,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             rb.gravityScale = 2.5f;
-            rb.linearVelocity = new Vector2(inputHorizontal * velocidadMovimiento, rb.linearVelocity.y);
+
+            if (contadorPerdidaControl <= 0f)
+            {
+                rb.linearVelocity = new Vector2(inputHorizontal * velocidadMovimiento, rb.linearVelocity.y);
+            }
         }
-        estaEnSuelo = Physics2D.OverlapCircle(piesPosicion.position, radioDeteccion, queEsSuelo);
-        estaEnPared = Physics2D.OverlapCircle(detectorPared.position, 0.3f, queEsPared);
+
+        estaEnSuelo = Physics2D.OverlapCircle(piesPosicion.position, radioDeteccionSuelo, queEsSuelo);
+        estaEnPared = Physics2D.OverlapCircle(detectorPared.position, radioDeteccionPared, queEsPared);
     }
 
     void Saltar()
@@ -348,10 +353,34 @@ public class PlayerController : MonoBehaviour
     {
         if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoSaltoPared;
         rb.linearVelocity = Vector2.zero;
-        contadorCooldownAgarre = 0.2f;
+
+        
+        contadorCooldownAgarre = 0.15f;
+
         estaEscalando = false;
-        float dir = mirandoDerecha ? -1 : 1;
-        rb.AddForce(new Vector2(dir * 5f, fuerzaSalto * 1.1f), ForceMode2D.Impulse);
+
+       
+        float dir = mirandoDerecha ? -1f : 1f;
+
+        
+        if (inputHorizontal == 0 || (inputHorizontal > 0 && mirandoDerecha) || (inputHorizontal < 0 && !mirandoDerecha))
+        {
+           
+            rb.AddForce(new Vector2(dir * 2f, fuerzaSalto * 1.1f), ForceMode2D.Impulse);
+
+         
+            contadorPerdidaControl = 0.05f;
+        }
+        
+        else
+        {
+           
+            rb.AddForce(new Vector2(dir * 6f, fuerzaSalto * 1.1f), ForceMode2D.Impulse);
+            contadorPerdidaControl = 0.25f;
+
+            
+        }
+
         contadorBufferSalto = 0f;
     }
 
@@ -368,7 +397,7 @@ public class PlayerController : MonoBehaviour
 
     void ManejarGiro()
     {
-        if (!estaEscalando)
+        if (!estaEscalando && contadorPerdidaControl <= 0f)
         {
             if (inputHorizontal > 0 && !mirandoDerecha) Voltear();
             else if (inputHorizontal < 0 && mirandoDerecha) Voltear();
@@ -383,7 +412,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (piesPosicion) { Gizmos.color = Color.red; Gizmos.DrawWireSphere(piesPosicion.position, radioDeteccion); }
-        if (detectorPared) { Gizmos.color = Color.blue; Gizmos.DrawWireSphere(detectorPared.position, 0.3f); }
+        if (piesPosicion) { Gizmos.color = Color.red; Gizmos.DrawWireSphere(piesPosicion.position, radioDeteccionSuelo); }
+        if (detectorPared) { Gizmos.color = Color.blue; Gizmos.DrawWireSphere(detectorPared.position, radioDeteccionPared); }
     }
 }

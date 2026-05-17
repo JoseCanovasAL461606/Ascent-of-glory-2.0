@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Al empezar, como los puntos son 0, ponemos un mensaje de ayuda
+       
         ActualizarInterfaz();
     }
 
