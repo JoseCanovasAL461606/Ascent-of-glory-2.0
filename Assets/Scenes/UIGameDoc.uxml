@@ -18,4 +18,5 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:ProgressBar value="100" title="" name="StaminaBar" class="my-progress-bar unity-progress-bar__title" style="position: absolute; width: 224px; top: 28px; left: -1px;"/>
+    <ui:Label text="Puntuacion: 0" name="TextoPuntosHUD" style="align-self: flex-end; font-size: 20px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&amp;guid=8a2b9e2a607dd2143b58c44bc32410b4&amp;type=3#Electronic Highway Sign&quot;);"/>
 </ui:UXML>

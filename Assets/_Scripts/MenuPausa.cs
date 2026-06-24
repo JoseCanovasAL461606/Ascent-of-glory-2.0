@@ -1,16 +1,33 @@
 using UnityEngine;
-
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem; 
 public class MenuPausa : MonoBehaviour
 {
-    public GameObject panelPausa; 
-    private bool juegoPausado = false;
+    private VisualElement root;
+    private bool estaPausado = false;
 
-    void Update()
+    private void OnEnable()
     {
-      
-        if (Input.GetKeyDown(KeyCode.Escape))
+        UIDocument uiDocument = GetComponent<UIDocument>();
+        root = uiDocument.rootVisualElement;
+
+       
+        root.style.display = DisplayStyle.None;
+
+        Button btnReanudar = root.Q<Button>("BotonReanudar");
+        Button btnSalir = root.Q<Button>("BotonSalirMenu");
+
+        if (btnReanudar != null) btnReanudar.clicked += Reanudar;
+        if (btnSalir != null) btnSalir.clicked += SalirAlMenu;
+    }
+
+    private void Update()
+    {
+        
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            if (juegoPausado)
+            if (estaPausado)
             {
                 Reanudar();
             }
@@ -21,23 +38,30 @@ public class MenuPausa : MonoBehaviour
         }
     }
 
-    public void Pausar()
+    private void Pausar()
     {
-        panelPausa.SetActive(true);
-        Time.timeScale = 0f; 
-        juegoPausado = true;
+        estaPausado = true;
+        Time.timeScale = 0f;
+
+       
+        root.style.display = DisplayStyle.Flex;
     }
 
-    public void Reanudar()
+    private void Reanudar()
     {
-        panelPausa.SetActive(false);
+        estaPausado = false;
         Time.timeScale = 1f; 
-        juegoPausado = false;
+
+       
+        root.style.display = DisplayStyle.None;
     }
 
-    public void SalirDelJuego()
+    private void SalirAlMenu()
     {
-        Debug.Log("Cerrando el juego..."); 
-        Application.Quit(); 
+        
+        Time.timeScale = 1f;
+
+       
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }

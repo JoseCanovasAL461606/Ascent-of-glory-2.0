@@ -1,20 +1,28 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.InputSystem; 
 
 public class BanderaFinal : MonoBehaviour
 {
-    public GameObject cartelVictoria; 
-    
-    public TextMeshProUGUI textoPuntosFinales; 
+    [Header("Conexión con la UI Toolkit")]
+    public MenuVictoria menuVictoria; 
 
+    private ControlesJugador controles;
     private bool jugadorCerca = false;
+
+    void Awake()
+    {
+        controles = new ControlesJugador();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             jugadorCerca = true;
-           
+
+          
+            controles.Jugador.Interactuar.performed += AlInteractuar;
+            controles.Enable();
         }
     }
 
@@ -22,37 +30,47 @@ public class BanderaFinal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            jugadorCerca = false;
-           
+            DesactivarControles();
         }
     }
 
-    void Update()
+    private void OnDisable()
     {
         
-        if (jugadorCerca && Input.GetKeyDown(KeyCode.E))
+        DesactivarControles();
+    }
+
+    private void DesactivarControles()
+    {
+        if (jugadorCerca)
         {
-            FinalizarJuego();
+            jugadorCerca = false;
+            controles.Jugador.Interactuar.performed -= AlInteractuar;
+            controles.Disable();
         }
+    }
+
+   
+    private void AlInteractuar(InputAction.CallbackContext contexto)
+    {
+        FinalizarJuego();
     }
 
     void FinalizarJuego()
     {
-     
+        
+        DesactivarControles();
 
-       
-        if (cartelVictoria != null)
+        if (menuVictoria != null)
         {
-            cartelVictoria.SetActive(true);
-
-            
-            if (textoPuntosFinales != null)
-            {
-                textoPuntosFinales.text = "Puntuación final: " + GameManager.instance.puntosTotales;
-            }
+           
+            int puntosFinales = GameManager.instance.puntosTotales;
+            menuVictoria.MostrarVictoria(puntosFinales);
         }
-
-      
-        Time.timeScale = 0f;
+        else
+        {
+           
+            Time.timeScale = 0f;
+        }
     }
 }

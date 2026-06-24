@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private ProgressBar uiHealthBar;
     private ProgressBar uiStaminaBar;
+    private Label uiScoreLabel;
     private VisualElement[] iconosInventarioComida = new VisualElement[2];
     private VisualElement[] iconosInventarioObjetos = new VisualElement[2];
 
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private float inputHorizontal;
     private float inputVertical;
+    private bool inputEscalar; 
     private bool estaEnSuelo;
     private bool estaEnPared;
     private bool estaEscalando;
@@ -86,6 +88,22 @@ public class PlayerController : MonoBehaviour
     {
         controles.Enable();
 
+    
+        controles.Jugador.Mover.performed += LeerMovimiento;
+        controles.Jugador.Mover.canceled += LeerMovimiento;
+
+        controles.Jugador.Saltar.performed += AlSaltar;
+
+        controles.Jugador.Escalar.performed += EmpezarEscalar;
+        controles.Jugador.Escalar.canceled += TerminarEscalar;
+
+        controles.Jugador.Interactuar.performed += AlInteractuar;
+
+        controles.Jugador.Obj1.performed += AlUsarObj1;
+        controles.Jugador.Obj2.performed += AlUsarObj2;
+        controles.Jugador.Com1.performed += AlUsarCom1;
+        controles.Jugador.Com2.performed += AlUsarCom2;
+
         UIDocument uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null) uiDocument = FindFirstObjectByType<UIDocument>();
         if (uiDocument != null)
@@ -93,6 +111,7 @@ public class PlayerController : MonoBehaviour
             VisualElement root = uiDocument.rootVisualElement;
             uiHealthBar = root.Q<ProgressBar>("HealthBar");
             uiStaminaBar = root.Q<ProgressBar>("StaminaBar");
+            uiScoreLabel = root.Q<Label>("TextoPuntosHUD");
 
             for (int i = 0; i < 2; i++)
             {
@@ -107,6 +126,22 @@ public class PlayerController : MonoBehaviour
 
     void OnDisable()
     {
+     
+        controles.Jugador.Mover.performed -= LeerMovimiento;
+        controles.Jugador.Mover.canceled -= LeerMovimiento;
+
+        controles.Jugador.Saltar.performed -= AlSaltar;
+
+        controles.Jugador.Escalar.performed -= EmpezarEscalar;
+        controles.Jugador.Escalar.canceled -= TerminarEscalar;
+
+        controles.Jugador.Interactuar.performed -= AlInteractuar;
+
+        controles.Jugador.Obj1.performed -= AlUsarObj1;
+        controles.Jugador.Obj2.performed -= AlUsarObj2;
+        controles.Jugador.Com1.performed -= AlUsarCom1;
+        controles.Jugador.Com2.performed -= AlUsarCom2;
+
         controles.Disable();
     }
 
@@ -120,37 +155,51 @@ public class PlayerController : MonoBehaviour
         if (escudoBurbujaVisual != null) escudoBurbujaVisual.SetActive(false);
     }
 
+   
+    private void LeerMovimiento(InputAction.CallbackContext contexto)
+    {
+        Vector2 movimiento = contexto.ReadValue<Vector2>();
+        inputHorizontal = movimiento.x;
+        inputVertical = movimiento.y;
+    }
+
+    private void AlSaltar(InputAction.CallbackContext contexto)
+    {
+        if (!estaMuerto) contadorBufferSalto = tiempoBufferSalto;
+    }
+
+    private void EmpezarEscalar(InputAction.CallbackContext contexto) => inputEscalar = true;
+    private void TerminarEscalar(InputAction.CallbackContext contexto) => inputEscalar = false;
+
+    private void AlInteractuar(InputAction.CallbackContext contexto)
+    {
+        if (estaMuerto) return;
+
+        float direccion = mirandoDerecha ? 1f : -1f;
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.5f, 1f), 0f, new Vector2(direccion, 0f), distanciaInteraccion, queEsInteractuable);
+
+        if (hit.collider != null)
+        {
+            IInteractable objeto = hit.collider.GetComponent<IInteractable>();
+            if (objeto != null) objeto.Interactuar(this);
+        }
+    }
+
+    private void AlUsarObj1(InputAction.CallbackContext contexto) { if (!estaMuerto) UsarSlotObjeto(0); }
+    private void AlUsarObj2(InputAction.CallbackContext contexto) { if (!estaMuerto) UsarSlotObjeto(1); }
+    private void AlUsarCom1(InputAction.CallbackContext contexto) { if (!estaMuerto) UsarSlotComida(0); }
+    private void AlUsarCom2(InputAction.CallbackContext contexto) { if (!estaMuerto) UsarSlotComida(1); }
+    
+
     void Update()
     {
         if (estaMuerto) return;
 
-        Vector2 movimiento = controles.Jugador.Mover.ReadValue<Vector2>();
-        inputHorizontal = movimiento.x;
-        inputVertical = movimiento.y;
-
+       
         if (contadorCooldownAgarre > 0f) contadorCooldownAgarre -= Time.deltaTime;
-
         if (contadorPerdidaControl > 0f) contadorPerdidaControl -= Time.deltaTime;
 
         ManejarPowerUps();
-
-        if (controles.Jugador.Interactuar.WasPressedThisFrame())
-        {
-            float direccion = mirandoDerecha ? 1f : -1f;
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.5f, 1f), 0f, new Vector2(direccion, 0f), distanciaInteraccion, queEsInteractuable);
-
-            if (hit.collider != null)
-            {
-                IInteractable objeto = hit.collider.GetComponent<IInteractable>();
-                if (objeto != null) objeto.Interactuar(this);
-            }
-        }
-
-        if (controles.Jugador.Obj1.WasPressedThisFrame()) UsarSlotObjeto(0);
-        if (controles.Jugador.Obj2.WasPressedThisFrame()) UsarSlotObjeto(1);
-        if (controles.Jugador.Com1.WasPressedThisFrame()) UsarSlotComida(0);
-        if (controles.Jugador.Com2.WasPressedThisFrame()) UsarSlotComida(1);
-
         ManejarResistencia();
         ManejarSaltoYEscala();
         ActualizarUI();
@@ -251,12 +300,13 @@ public class PlayerController : MonoBehaviour
     {
         if (estaEnSuelo) contadorCoyote = tiempoCoyote; else contadorCoyote -= Time.deltaTime;
 
-        if (controles.Jugador.Saltar.WasPressedThisFrame()) contadorBufferSalto = tiempoBufferSalto;
-        else contadorBufferSalto -= Time.deltaTime;
+      
+        contadorBufferSalto -= Time.deltaTime;
 
         bool tieneStaminaParaEscalar = resistenciaActual > 0 || tiempoResistenciaIlimitada > 0;
 
-        if (estaEnPared && !estaEnSuelo && controles.Jugador.Escalar.IsInProgress() && tieneStaminaParaEscalar && contadorCooldownAgarre <= 0f)
+       
+        if (estaEnPared && !estaEnSuelo && inputEscalar && tieneStaminaParaEscalar && contadorCooldownAgarre <= 0f)
         {
             estaEscalando = true;
             if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoEscalada * Time.deltaTime;
@@ -284,6 +334,10 @@ public class PlayerController : MonoBehaviour
             uiStaminaBar.value = resistenciaActual;
             int porcStam = Mathf.Clamp(Mathf.RoundToInt((resistenciaActual / resistenciaMaxima) * 100f), 0, 100);
             uiStaminaBar.title = $"{porcStam}%";
+        }
+        if (uiScoreLabel != null && GameManager.instance != null)
+        {
+            uiScoreLabel.text = "Puntuacion: " + GameManager.instance.puntosTotales;
         }
 
         for (int i = 0; i < 2; i++)
@@ -353,32 +407,22 @@ public class PlayerController : MonoBehaviour
     {
         if (tiempoResistenciaIlimitada <= 0) resistenciaActual -= gastoSaltoPared;
         rb.linearVelocity = Vector2.zero;
-
-        
         contadorCooldownAgarre = 0.15f;
 
         estaEscalando = false;
 
-       
         float dir = mirandoDerecha ? -1f : 1f;
 
-        
         if (inputHorizontal == 0 || (inputHorizontal > 0 && mirandoDerecha) || (inputHorizontal < 0 && !mirandoDerecha))
         {
-           
             rb.AddForce(new Vector2(dir * 2f, fuerzaSalto * 1.1f), ForceMode2D.Impulse);
-
-         
             contadorPerdidaControl = 0.05f;
         }
-        
         else
         {
-           
             rb.AddForce(new Vector2(dir * 6f, fuerzaSalto * 1.1f), ForceMode2D.Impulse);
             contadorPerdidaControl = 0.25f;
-
-            
+            Voltear();
         }
 
         contadorBufferSalto = 0f;
